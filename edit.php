@@ -26,14 +26,12 @@ $status = "";
 if(isset($_POST['new']) && $_POST['new']==1)
 {
 $id=$_REQUEST['id'];
-// $trn_date = date("Y-m-d H:i:s");
 $first_name =$_REQUEST['first_name'];
 $last_name =$_REQUEST['last_name'];
 $phone =$_REQUEST['phone'];
 $email =$_REQUEST['email'];
 // $password =$_REQUEST['password'];
 $dob =$_REQUEST['dob'];
-// $submittedby = $_SESSION["username"];
 $update="update users set 
 first_name='".$first_name."', last_name='".$last_name."', phone='".$phone."', email='".$email."',
 dob='".$dob."' where id='".$id."'";
@@ -55,8 +53,6 @@ required value="<?php echo $row['last_name'];?>" /></p>
 required value="<?php echo $row['phone'];?>" /></p>
 <p><input type="text" class="login-input" name="email" placeholder="Email" 
 required value="<?php echo $row['email'];?>" /></p>
-<!-- <p><input type="text" class="login-input" name="password" placeholder="Password" 
-required value="<?php echo $row['password'];?>" /></p> -->
 <p><input type="date" class="login-input" name="dob"  
 required value="<?php echo $row['dob'];?>" /></p>
 <p><input name="submit" class="login-button" type="submit" value="Update" /></p>
